@@ -19,7 +19,7 @@ jobs:
         dotnet-version: '8.0.x'  # vagy amit használsz
 
     - name: Build the app
-      run: dotnet publish src/YourApp/YourApp.fsproj -c Release -r win-x64 --self-contained false -o output
+      run: dotnet publish PwdHandler/PwdHandler.fsproj -c Release -r win-x64 --self-contained false -o output
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
