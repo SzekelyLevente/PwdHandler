@@ -1,13 +1,13 @@
-name: Build and Deploy EXE to GitHub Pages
+name: Build and Deploy ZIP to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # vagy ami a főágad neve
-      
+      - main
+
 jobs:
   build:
-    runs-on: windows-latest  # Kell Windows az .exe buildhez
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -16,13 +16,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'  # vagy amit használsz
+        dotnet-version: '8.0.x'
 
-    - name: Build the app
-      run: dotnet publish PwdHandler/PwdHandler.fsproj -c Release -r win-x64 --self-contained false -o output
+    - name: Publish the console app
+      run: dotnet publish src/PwdHandler/PwdHandler.fsproj -c Release -r win-x64 --self-contained false -o output
+
+    - name: Create ZIP archive
+      run: Compress-Archive -Path output\* -DestinationPath site\PWH.zip
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./output
+        publish_dir: ./site
