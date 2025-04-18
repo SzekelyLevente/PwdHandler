@@ -71,3 +71,10 @@ For example, if I want to generate a password that is 20 characters long, with n
 ## Cryptography
 
 The stored passwords and the master password are encrypted using AES encryption. Here's how it works: there is a secret key that is the same for every password, and a public key (IV) that is different for each password. This means that the IV must be stored along with the password in order for it to be decrypted later.
+
+## Try live
+
+1. Click the link below: [https://github.com/SzekelyLevente/PwdHandler/tree/gh-pages](https://github.com/SzekelyLevente/PwdHandler/tree/gh-pages)
+2. Download the PWH.zip file
+3. Extract the downloaded archive
+4. Find the PwdHandler.exe file and click on it
