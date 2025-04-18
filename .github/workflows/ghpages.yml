@@ -56,7 +56,8 @@ jobs:
           path: release
 
       - name: Deploy 🚀
-        uses: actions/download-artifact@v4
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
+          FOLDER: dist
