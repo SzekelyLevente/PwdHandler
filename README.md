@@ -74,7 +74,6 @@ The stored passwords and the master password are encrypted using AES encryption.
 
 ## Try live
 
-1. Click the link below: [https://github.com/SzekelyLevente/PwdHandler/tree/gh-pages](https://github.com/SzekelyLevente/PwdHandler/tree/gh-pages)
-2. Download the PWH.zip file
-3. Extract the downloaded archive
-4. Find the PwdHandler.exe file and click on it
+1. Click the link below to download the PWH.zip file: [https://szekelylevente.github.io/PwdHandler/PWH.zip](https://szekelylevente.github.io/PwdHandler/PWH.zip)
+2. Extract the downloaded archive
+3. Find the PwdHandler.exe file and click on it
